@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="mywebpage.css">
+	<title>Word Counter</title>
+</head>
+<body>
+	<h1 style="font-size:200%;">Word Counter</h1>
+	<p style="font-size:130%;">
+	  This tool is developed by Zoya from ACPL Tracking. Visit the blog <a href="https://trackacpl.in" > here</a>.
+	</p>
+	<script>
+		function countWords() {
+			// Get user input
+			var text = document.getElementById("textInput").value;
+
+			// Split text into array of words
+			var words = text.split(/\s+/);
+
+			// Count number of words
+			var numWords = words.length;
+
+			// Display result to user
+			document.getElementById("wordCountResult").innerHTML = "Number of words: " + numWords;
+		}
+	</script>
+	<p style="font-size:130%;">Enter text to count the number of words:</p>
+	<textarea id="textInput" rows="10" cols="50"></textarea>
+	<br><br>
+	<input type="button" value="Count Words" onclick="countWords()">
+	<br><br>
+	<p id="wordCountResult"></p>
+</body>
+</html>
